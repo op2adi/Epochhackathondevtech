@@ -3,6 +3,7 @@
 import numpy as np
 from sklearn.datasets import fetch_california_housing
 
+
 # Function to load dataset
 def dataset():
     k = fetch_california_housing(as_frame=True)
@@ -98,7 +99,7 @@ def initialize_lines(num_lines, points):
     return np.array(lines_init)
 
 # Example usage
-points = dataset()[0:500]
+points = dataset()[0:50]
 num_lines = 1
 lines_init = initialize_lines(num_lines, points)
 lines_opt, min_cost = gradient_descent_multiple(points, lines_init)
